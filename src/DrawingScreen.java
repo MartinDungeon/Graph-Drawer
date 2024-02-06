@@ -32,7 +32,6 @@ public class DrawingScreen extends javax.swing.JFrame {
         this.graph=graph;
         defaultListModel = new DefaultListModel();
         weightsList.setModel(defaultListModel);
-        calculateButton.setVisible(false);
     }
     /**
      * This method is called from within the constructor to initialize the form.
@@ -44,37 +43,24 @@ public class DrawingScreen extends javax.swing.JFrame {
     private void initComponents() {
 
         drawingPanel = new javax.swing.JPanel();
-        calculateButton = new javax.swing.JButton();
         drawButton = new javax.swing.JButton();
-        addButton = new javax.swing.JButton();
-        jButton3 = new javax.swing.JButton();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton7 = new javax.swing.JButton();
-        sumOfWeightsButton = new javax.swing.JButton();
         jButton6 = new javax.swing.JButton();
         jScrollPane2 = new javax.swing.JScrollPane();
-        weightsList = new javax.swing.JList<>();
+        weightsList = new javax.swing.JList<String>();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setTitle("Drawing Screen");
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
-        calculateButton.setText("Calculate");
-
         javax.swing.GroupLayout drawingPanelLayout = new javax.swing.GroupLayout(drawingPanel);
         drawingPanel.setLayout(drawingPanelLayout);
         drawingPanelLayout.setHorizontalGroup(
             drawingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(drawingPanelLayout.createSequentialGroup()
-                .addComponent(calculateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 119, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 217, Short.MAX_VALUE))
+            .addGap(0, 336, Short.MAX_VALUE)
         );
         drawingPanelLayout.setVerticalGroup(
             drawingPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(drawingPanelLayout.createSequentialGroup()
-                .addComponent(calculateButton, javax.swing.GroupLayout.PREFERRED_SIZE, 49, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 420, Short.MAX_VALUE)
         );
 
         drawButton.setText("Draw Graph");
@@ -84,34 +70,12 @@ public class DrawingScreen extends javax.swing.JFrame {
             }
         });
 
-        addButton.setText("Add Node");
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
-
-        jButton3.setText("Delete Node");
-        jButton3.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton3ActionPerformed(evt);
-            }
-        });
-
-        jButton4.setText("Add Edge");
-
-        jButton5.setText("Delete Edge");
-
-        jButton7.setText("Update Weights");
-
-        sumOfWeightsButton.setText("Sum of Weights");
-        sumOfWeightsButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                sumOfWeightsButtonActionPerformed(evt);
-            }
-        });
-
         jButton6.setText("Main Menu");
+        jButton6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton6ActionPerformed(evt);
+            }
+        });
 
         jScrollPane2.setViewportView(weightsList);
 
@@ -127,13 +91,7 @@ public class DrawingScreen extends javax.swing.JFrame {
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jButton6, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(drawButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(addButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton3, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(sumOfWeightsButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(drawButton, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 109, Short.MAX_VALUE))
                 .addContainerGap())
         );
         layout.setVerticalGroup(
@@ -143,22 +101,10 @@ public class DrawingScreen extends javax.swing.JFrame {
                 .addGroup(layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(layout.createSequentialGroup()
                         .addComponent(drawButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(addButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(sumOfWeightsButton)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 173, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addComponent(jButton6, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(drawingPanel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jScrollPane2))
+                    .addComponent(jScrollPane2, javax.swing.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -171,6 +117,15 @@ public class DrawingScreen extends javax.swing.JFrame {
         fillWeightsList();
     }//GEN-LAST:event_drawButtonActionPerformed
 
+    private void jButton6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton6ActionPerformed
+        this.dispose();
+        MainMenu menu = new MainMenu();
+        menu.setVisible(true);
+        
+        
+    }//GEN-LAST:event_jButton6ActionPerformed
+
+    
     private void fillWeightsList()
     {
         for (int i=0 ; i<graph.getEdgesList().size() ; i++)
@@ -181,24 +136,6 @@ public class DrawingScreen extends javax.swing.JFrame {
         weightsList.setModel(defaultListModel);
     }
     
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-       if (graph.addNode())
-           reDrawGraph();
-       else 
-           JOptionPane.showMessageDialog(this, "Maximum Number Of Nodes is 14", "Error", JOptionPane.ERROR_MESSAGE);
-    }//GEN-LAST:event_addButtonActionPerformed
-
-    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
-        // TODO add your handling code here:
-        
-    }//GEN-LAST:event_jButton3ActionPerformed
-
-    private void sumOfWeightsButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_sumOfWeightsButtonActionPerformed
-        calculateButton.setVisible(true);
-        JOptionPane.showMessageDialog(this, "Press the edges you want to calculate its sum in edges list then press \"Calculate\" button", "Information", JOptionPane.INFORMATION_MESSAGE);
-        sumOfWeightsButtonPressed=true;
-    }//GEN-LAST:event_sumOfWeightsButtonActionPerformed
-
     private void reDrawGraph()
     {
         Graphics2D gfx =  (Graphics2D)drawingPanel.getGraphics();
@@ -236,17 +173,10 @@ public class DrawingScreen extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JButton addButton;
-    private javax.swing.JButton calculateButton;
     private javax.swing.JButton drawButton;
     private javax.swing.JPanel drawingPanel;
-    private javax.swing.JButton jButton3;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
     private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JButton sumOfWeightsButton;
     private javax.swing.JList<String> weightsList;
     // End of variables declaration//GEN-END:variables
 }

@@ -35,13 +35,7 @@
               <EmptySpace max="-2" attributes="0"/>
               <Group type="103" groupAlignment="0" max="-2" attributes="0">
                   <Component id="jButton6" alignment="1" max="32767" attributes="0"/>
-                  <Component id="drawButton" alignment="1" max="32767" attributes="0"/>
-                  <Component id="addButton" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jButton3" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jButton4" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jButton5" alignment="1" max="32767" attributes="0"/>
-                  <Component id="jButton7" alignment="1" max="32767" attributes="0"/>
-                  <Component id="sumOfWeightsButton" alignment="1" max="32767" attributes="0"/>
+                  <Component id="drawButton" alignment="1" pref="109" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -54,23 +48,11 @@
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
                       <Component id="drawButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="addButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton3" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton4" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton5" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="jButton7" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace max="-2" attributes="0"/>
-                      <Component id="sumOfWeightsButton" min="-2" max="-2" attributes="0"/>
-                      <EmptySpace pref="173" max="32767" attributes="0"/>
+                      <EmptySpace max="32767" attributes="0"/>
                       <Component id="jButton6" min="-2" pref="50" max="-2" attributes="0"/>
                   </Group>
                   <Component id="drawingPanel" alignment="0" max="32767" attributes="0"/>
-                  <Component id="jScrollPane2" alignment="0" max="32767" attributes="0"/>
+                  <Component id="jScrollPane2" alignment="0" pref="420" max="32767" attributes="0"/>
               </Group>
               <EmptySpace max="-2" attributes="0"/>
           </Group>
@@ -83,28 +65,15 @@
       <Layout>
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="calculateButton" min="-2" pref="119" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="217" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace min="0" pref="336" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
         <DimensionLayout dim="1">
           <Group type="103" groupAlignment="0" attributes="0">
-              <Group type="102" alignment="0" attributes="0">
-                  <Component id="calculateButton" min="-2" pref="49" max="-2" attributes="0"/>
-                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
-              </Group>
+              <EmptySpace min="0" pref="420" max="32767" attributes="0"/>
           </Group>
         </DimensionLayout>
       </Layout>
-      <SubComponents>
-        <Component class="javax.swing.JButton" name="calculateButton">
-          <Properties>
-            <Property name="text" type="java.lang.String" value="Calculate"/>
-          </Properties>
-        </Component>
-      </SubComponents>
     </Container>
     <Component class="javax.swing.JButton" name="drawButton">
       <Properties>
@@ -114,49 +83,13 @@
         <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="drawButtonActionPerformed"/>
       </Events>
     </Component>
-    <Component class="javax.swing.JButton" name="addButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Add Node"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addButtonActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton3">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Delete Node"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton3ActionPerformed"/>
-      </Events>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton4">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Add Edge"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton5">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Delete Edge"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="jButton7">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Update Weights"/>
-      </Properties>
-    </Component>
-    <Component class="javax.swing.JButton" name="sumOfWeightsButton">
-      <Properties>
-        <Property name="text" type="java.lang.String" value="Sum of Weights"/>
-      </Properties>
-      <Events>
-        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="sumOfWeightsButtonActionPerformed"/>
-      </Events>
-    </Component>
     <Component class="javax.swing.JButton" name="jButton6">
       <Properties>
         <Property name="text" type="java.lang.String" value="Main Menu"/>
       </Properties>
+      <Events>
+        <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="jButton6ActionPerformed"/>
+      </Events>
     </Component>
     <Container class="javax.swing.JScrollPane" name="jScrollPane2">
       <AuxValues>
